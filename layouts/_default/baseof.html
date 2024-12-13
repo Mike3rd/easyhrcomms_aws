@@ -1,0 +1,21 @@
+{{ if le hugo.Version "0.124.0" }}
+	{{ errorf "Please use Hugo version 0.124.0 or higher!" }}
+{{ end }}
+
+<!DOCTYPE html>
+<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "nav.html" . }}
+    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    {{ block "footer" . }}{{ end }}
+		<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45783127.js"></script>
+<!-- End of HubSpot Embed Code -->
+  </body>
+</html>
+
