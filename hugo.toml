@@ -1,4 +1,4 @@
-baseurl = "https://easyhrcomms.com"
+
 DefaultContentLanguage = "en"
 title = "EasyHRcomms"
 # Using theme as git submodule
@@ -17,6 +17,7 @@ pygmentsCodefencesGuessSyntax = true
     # id = "XXX"
 
 [Params]
+baseurl = "https://main.d1fc1tfl6awnl4.amplifyapp.com"
 homeTitle = "Easy HR Comms" # Set a different text for the header on the home page
   subtitle = "Design It Yourself"
   mainSections = ["post","posts"]
