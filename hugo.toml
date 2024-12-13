@@ -11,10 +11,10 @@ pygmentsCodefencesGuessSyntax = true
 #pygmentOptions = "linenos=inline"
 
 [Services]
-  [Services.Disqus.Shortname]
+  [Services.Disqus]
     # Shortname = "XXX"
   [Services.googleAnalytics]
-    id = "G-9QRC9PXZ3Q"
+    # id = "XXX"
 
 [Params]
 homeTitle = "Easy HR Comms" # Set a different text for the header on the home page
