@@ -4,6 +4,25 @@
  * 12-15-2024
  * ------------------------------------------------------------------*/
  
+ :root {
+
+    /* color-1(#5F9295)
+     * color-2(#2D2327)
+     */
+    --color-1                      : hsla(183, 22%, 48%, 1);
+    --color-2                      : hsla(336, 13%, 16%, 1);
+ 
+ 
+ 
+    /* preloader*/
+    --color-preloader-bg           : #CFE6E8;
+    --color-loader                 : var(--color-text-dark);
+    --color-loader-light           : var(--color-1-lighter); 
+ 
+ }
+ 
+ 
+ 
 a {color:#008AFF }
 
 
