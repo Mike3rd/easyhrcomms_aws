@@ -4,34 +4,27 @@
  *
  * ------------------------------------------------------------------- */
 
-(function(html) {
-
-    'use strict';
-
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
-
-        const preloader = document.querySelector('#preloader');
-        if (!preloader) return;
-
-        html.classList.add('ss-preload');
-        
-        window.addEventListener('load', function() {
-            html.classList.remove('ss-preload');
-            html.classList.add('ss-loaded');
-            tl.play();
-        });
-
-    }; // end ssPreloader
-
-   /* initialize
-    * ------------------------------------------------------ */
-    (function ssInit() {
-
-        ssPreloader();
-
-
-    });
-
-})(document.documentElement);
+let opts = {
+ lines: 13,
+ length: 28,
+ width: 14,
+ radius: 42,
+ scale: 1,
+ corners: 1,
+ color: '#FFF',
+ opacity: 0.25,
+ rotate: 0,
+ direction: 1,
+ speed: 1,
+ trail: 60,
+ fps: 20,
+ zIndex: 2e9,
+ className: 'spinner',
+ top: '50%',
+ left: '50%',
+ shadow: false,
+ hwaccel: false,
+ position: 'absolute',
+},
+ target = document.getElementById('spinner'),
+ spinner = new Spinner(opts).spin(target);
