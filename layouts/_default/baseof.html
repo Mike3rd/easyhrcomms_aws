@@ -8,6 +8,9 @@
     {{ partial "head.html" . }}
   </head>
   <body>
+      <div id="preloader">
+        <div id="loader" class="line"></div>
+    </div>
     {{ partial "nav.html" . }}
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     {{ block "main" . }}{{ end }}
@@ -16,6 +19,7 @@
 		<!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45783127.js"></script>
 <!-- End of HubSpot Embed Code -->
+	  <script src="static/js/main.js"></script>
   </body>
 </html>
 
