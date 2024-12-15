@@ -3,14 +3,11 @@
 {{ end }}
 
 <!DOCTYPE html>
-<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage" class="no-js js">
+<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
   <head>
     {{ partial "head.html" . }}
   </head>
   <body>
-    <div id="preloader">
-        <div id="loader" class="line"></div>
-    </div>
     {{ partial "nav.html" . }}
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     {{ block "main" . }}{{ end }}
@@ -19,7 +16,6 @@
 		<!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/45783127.js"></script>
 <!-- End of HubSpot Embed Code -->
-    <script src="/js/preloader.js"></script>
 
   </body>
 </html>
