@@ -11,13 +11,43 @@
      */
     --color-1                      : hsla(183, 22%, 48%, 1);
     --color-2                      : hsla(336, 13%, 16%, 1);
- 
+	--color-1-lighter              : hsla(183, 22%, 68%, 1);
+	--color-text-dark              : var(--color-gray-19);
+     /* shades 
+     * generated using 
+     * Tint & Shade Generator 
+     * (https://maketintsandshades.com/)
+     */
+    --color-black                  : #000000;
+    --color-gray-19                : #0d0f0f;
+    --color-gray-18                : #1b1e1e;
+    --color-gray-17                : #282d2e;
+    --color-gray-16                : #363c3d;
+    --color-gray-15                : #444b4c;
+    --color-gray-14                : #515a5b;
+    --color-gray-13                : #5f696a;
+    --color-gray-12                : #6c787a;
+    --color-gray-11                : #7a8789;
+    --color-gray-10                : #879698;
+    --color-gray-9                 : #93a1a2;
+    --color-gray-8                 : #9fabad;
+    --color-gray-7                 : #abb6b7;
+    --color-gray-6                 : #b7c0c1;
+    --color-gray-5                 : #c3cbcc;
+    --color-gray-4                 : #cfd5d6;
+    --color-gray-3                 : #dbe0e0;
+    --color-gray-2                 : #e7eaea;
+    --color-gray-1                 : #f3f5f5;
+    --color-white                  : #ffffff;
  
  
     /* preloader*/
     --color-preloader-bg           : #CFE6E8;
     --color-loader                 : var(--color-text-dark);
     --color-loader-light           : var(--color-1-lighter); 
+ 
+ 
+ 
  
  }
  
@@ -84,12 +114,72 @@ code {
     border-radius: 4px;
 }
 
-.loader {
-   margin: auto;
-   border: 20px solid #EAF0F6;
-   border-radius: 50%;
-   border-top: 20px solid #FF7A59;
-   width: 200px;
-   height: 200px;
-   animation: spinner 4s linear infinite;
+
+
+
+
+
+
+
+#preloader {
+    position        : fixed;
+    display         : flex;
+    flex-flow       : row wrap;
+    justify-content : center;
+    align-items     : center;
+    background      : var(--color-preloader-bg);
+    z-index         : 500;
+    height          : 100vh;
+    width           : 100%;
+    opacity         : 1;
+    overflow        : hidden;
 }
+
+.no-js #preloader {
+    display : none;
+}
+
+#loader {
+    background-color : var(--color-loader-light);
+}
+
+@-webkit-keyframes line {
+    from {
+        background-position : -60px 0;
+    }
+
+    to {
+        background-position : 60px 0;
+    }
+}
+
+@keyframes line {
+    from {
+        background-position : -60px 0;
+    }
+
+    to {
+        background-position : 60px 0;
+    }
+}
+
+.line:before {
+    -webkit-animation : line .75s infinite alternate ease-in-out;
+    animation         : line .75s infinite alternate ease-in-out;
+    background        : -webkit-gradient(linear, left top, right top, from(var(--color-loader)), to(var(--color-loader)));
+    background        : linear-gradient(90deg, var(--color-loader), var(--color-loader));
+    background-repeat : no-repeat;
+    background-size   : 80px 4px;
+    content           : '';
+    display           : block;
+    height            : 4px;
+    width             : 80px;
+}
+
+
+
+
+
+
+
+
