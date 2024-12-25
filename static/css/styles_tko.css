@@ -5,6 +5,9 @@
  * ------------------------------------------------------------------*/
  
  :root {
+	 
+	--checkout-text-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif; 
+	 
 
     /* color-1(#5F9295)
      * color-2(#2D2327)
@@ -13,6 +16,9 @@
     --color-2                      : hsla(336, 13%, 16%, 1);
 	--color-1-lighter              : hsla(183, 22%, 68%, 1);
 	--color-text-dark              : var(--color-gray-19);
+	
+	--tko-button              : hsla(207, 100%, 42.6%, 1);
+	
      /* shades 
      * generated using 
      * Tint & Shade Generator 
@@ -112,4 +118,41 @@ code {
     color: #c7254e;
     background-color: #dddddd!important;
     border-radius: 4px;
+}
+
+
+/*TKO BUTTON */
+
+
+#tko_button_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:5px
+}
+
+#tko_button{
+  background-color:white;
+    padding:10px;
+  border-radius:5px;
+}
+
+
+
+ a.tko_button:link,  a.tko_button:visited {
+  background-color: var(--tko-button);
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width:265px;
+  border-radius:5px;
+  font-family:  var(--checkout-text-font-family);
+  font-weight: 500;
+  font-size: 15px
+}
+
+a.tko_button:hover, a.tko_button:active {
+  background-color: var(--color-text-dark);
 }
